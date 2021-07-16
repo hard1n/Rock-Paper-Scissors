@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijeras</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="battlefield">
+            <aside class="aside-player aside">
+                <figure>
+                    <figcaption id="player-move">Tu selección</figcaption>
+                    <img class=" player-selection active" src="./images/icon_50x50.png" alt="">
+                    <img class="player-selection" src="./images/piedra-left.png" alt="">
+                    <img class="player-selection" src="./images/papel-left.png" alt="">
+                    <img class="player-selection" src="./images/tijeras-left.png" alt="">
+                </figure>
+            </aside>
+            <div class="div-vs">
+                <span>VS</span>
+            </div>
+            <aside class="aside-pc aside">
+                <figure>
+                    <figcaption id="pc-move">Computadora</figcaption>
+                    <img class="pc-selection active" src="./images/icon_50x50.png" alt="">
+                    <img class="pc-selection" src="./images/piedra-right.png" alt="">
+                    <img class="pc-selection" src="./images/papel-right.png" alt="">
+                    <img class="pc-selection" src="./images/tijeras-right.png" alt="">
+                </figure>
+            </aside>
+        </section>
+        <!-- Marcador -->
+        <section class="score-chart">
+            <span id="headline-chart">Marcador</span>
+            <div>
+                <span>Jugador</span>
+                <span id="score-player">0</span>
+            </div>
+            <div class="separator">
+                <span>Computador</span>
+                <span id="score-pc">0</span>
+            </div>
+        </section>
+        <!-- Obcciones de juego -->
+        <button id="restart-btn">REINICIAR</button>
+        <section>
+            <button id="rock-btn" class="selection-btn">
+                <img src="./images/piedra.png" alt="">
+            </button>
+            <button id="paper-btn" class="selection-btn">
+                <img src="./images/papel.png" alt="">
+            </button>
+            <button id="scissors-btn" class="selection-btn">
+                <img src="./images/tijeras.png" alt="">
+            </button>
+        </section>
+    </main>
+    <footer class="footer">
+        <span>Hard1n &copy; 2021</span>
+    </footer>
+    <script src="./PiedraJuego.js"></script>
+</body>
+</html> 
