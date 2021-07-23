@@ -1,9 +1,9 @@
-var rock = 0;
-var paper = 1;
-var scissors = 2;
+let rock = 0;
+let paper = 1;
+let scissors = 2;
 let playerCounter = 0;
 let pcCounter = 0;
-
+// Index de imagenes
 let playerIndex = 0;
 let pcIndex = 0;
 // Botones
@@ -11,12 +11,15 @@ const rockBtn = document.getElementById('rock-btn');
 const paperBtn = document.getElementById('paper-btn');
 const scissorsBtn = document.getElementById('scissors-btn');
 const restartBtn = document.getElementById("restart-btn");
-//puntos
-let playerScore = document.querySelector('#score-player');
-let pcScore = document.querySelector('#score-pc');
-//Seleccion de los juagadores
+// puntos
+const playerScore = document.querySelector('#score-player');
+const pcScore = document.querySelector('#score-pc');
+// Seleccion de los juagadores
 const playerSelection = document.querySelectorAll('.player-selection');
 const computerSelection = document.querySelectorAll('.pc-selection');
+// Indicador
+const borderPlayer = document.querySelector(".aside-player");
+const borderPc = document.querySelector(".aside-pc");
 
 function winner(winner){
     let youWin = document.querySelector(winner);
@@ -31,14 +34,31 @@ function loser(loser){
 }
 
 function draw(){
-    let player = document.querySelector(".aside-player");
-    let pc = document.querySelector(".aside-pc");
-    player.style.border = "1px solid #1e90ff";
-    player.style.boxShadow ="#1e90ff 0px 6px 16px";
-    pc.style.border = "1px solid #1e90ff";
-    pc.style.boxShadow ="#1e90ff 0px 6px 16px";
+    borderPlayer.style.border = "1px solid #1e90ff";
+    borderPlayer.style.boxShadow ="#1e90ff 0px 6px 16px";
+    borderPc.style.border = "1px solid #1e90ff";
+    borderPc.style.boxShadow ="#1e90ff 0px 6px 16px";
 }
+// Boton Reiniciar
+restartBtn.addEventListener('click', function() {
+    pcCounter = 0;
+    playerCounter = 0;
+    pcScore.textContent = String(pcCounter);
+    playerScore.textContent = String(playerCounter);
 
+    playerSelection[playerIndex].classList.remove("active");
+    playerSelection[0].classList.add("active");
+    playerIndex = 0;
+    computerSelection[pcIndex].classList.remove("active");
+    computerSelection[0].classList.add("active");
+    pcIndex = 0;
+
+    borderPlayer.style.border = "1px solid rgb(221, 221, 221)";
+    borderPlayer.style.boxShadow ="rgb(0 0 0 / 12%) 0px 6px 16px";
+    borderPc.style.border = "1px solid rgb(221, 221, 221)";
+    borderPc.style.boxShadow ="rgb(0 0 0 / 12%) 0px 6px 16px";
+});
+// Boton Piedra
 rockBtn.addEventListener('click', function() {
     playerSelection[playerIndex].classList.remove("active");
     playerSelection[1].classList.add("active");
@@ -80,7 +100,7 @@ rockBtn.addEventListener('click', function() {
         loser(".aside-pc");
     }
 });
-
+//Boton Papel
 paperBtn.addEventListener('click', function() {
 
     playerSelection[playerIndex].classList.remove("active");
@@ -121,7 +141,7 @@ paperBtn.addEventListener('click', function() {
         loser(".aside-player");
     }
 });
-
+//Boton tijeras
 scissorsBtn.addEventListener('click', function() {
 
     playerSelection[playerIndex].classList.remove("active");

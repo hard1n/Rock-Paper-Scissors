@@ -10,17 +10,13 @@
 }
 
 body {
-    /* background-color: #1e90ff; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* border: 1px solid rgb(221, 221, 221); */
-
 }
 
 .container {
     width: 100%;
     height: inherit;
     background-color: #ffffff;
-    /* margin-top: 3rem; */
     padding-top: 0 1rem 1rem;
 }
 
@@ -40,15 +36,6 @@ section {
     padding: 1rem;
 }
 
-/* .battlefield {
-    height: 50vh;
-    border: 1px solid gray;
-    border-radius: 1rem;
-    margin: 1rem;
-    padding: 2rem;
-    background-color: #ecf0f1;
-} */
-
 .aside-player, .aside-pc {
     height: 25vh;
     width: 45%;
@@ -63,7 +50,6 @@ section {
 }
 
 aside img {
-    /* border: 1px solid red; */
     width: 100%;
 }
 
@@ -75,7 +61,6 @@ aside img {
 }
 
 figcaption {
-    /* border: 1px solid red; */
     font-size: 15px;
     color: #a4b0be;
     margin: 0 auto;
@@ -103,7 +88,6 @@ figcaption {
 }
 
 .score-chart span {
-    /* border: 1px solid red; */
     display: block;
     text-align: center;
     font-size: 1rem;
@@ -165,7 +149,7 @@ figcaption {
 .footer {
     width: 100%;
     color: rgb(221, 221, 221);
-    border: 1px solid rgb(221, 221, 221);
+    border-top: 1px solid rgb(221, 221, 221);
     border-radius: 0.5rem;
     text-align: center;
     padding: 0.5rem;
@@ -179,7 +163,7 @@ figcaption {
         background-color: #1e90ff;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-
+    
     .container {
         border-radius: 1rem;
         border: 1px solid rgb(221, 221, 221);
@@ -209,15 +193,6 @@ figcaption {
         padding: 1rem;
     }
     
-    /* .battlefield {
-        height: 50vh;
-        border: 1px solid gray;
-        border-radius: 1rem;
-        margin: 1rem;
-        padding: 2rem;
-        background-color: #ecf0f1;
-    } */
-    
     div > span {
         font-size: 3rem;
     }
@@ -244,7 +219,7 @@ figcaption {
     
     .selection-btn:hover{
         opacity: 80%;
-        height: 23vh;
+        height: 20vh;
     }
     
     #restart-btn {
@@ -261,6 +236,7 @@ figcaption {
     }
     
     #restart-btn:hover {
+        border: 1px solid #ffffff;
         background-color: #1e90ff;
         opacity: 80%;
         color: #f1f2f6;
@@ -277,6 +253,18 @@ figcaption {
 }
 
 @media (min-width: 992px) {
+    header {
+        border: none;
+        font-size: 2rem;
+        padding: 0.5rem 0 0;
+    }
+
+    figure img {
+        width: 85%;
+        margin: 0 auto;
+        padding: 0.5rem;
+    }
+
     .aside-player, .aside-pc {
         height: 35vh;
         margin: 1rem;
@@ -289,10 +277,11 @@ figcaption {
 
     .selection-btn {
         height: 15vh;
+        width: 10%;
         margin: 0 1rem;
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px){
     .aside-player, .aside-pc {
         width: 30%;
     }
