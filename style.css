@@ -50,7 +50,7 @@ section {
 }
 
 aside img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .div-vs {
@@ -255,7 +255,7 @@ figcaption {
 @media (min-width: 992px) {
     header {
         border: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding: 0.5rem 0 0;
     }
 
@@ -271,6 +271,12 @@ figcaption {
         padding: 2rem;
     }
 
+    /* aside img{
+        width: inherit;
+        height: inherit;
+        object-fit: scale-down;
+    } */
+
     .score-chart {
         width: 50%;
     }
@@ -283,6 +289,7 @@ figcaption {
 }
 @media (min-width: 1200px){
     .aside-player, .aside-pc {
-        width: 30%;
+        padding: 0.5rem 2rem;
+        width: 25%;
     }
 }
