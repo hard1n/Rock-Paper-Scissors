@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: #ffffff;
   padding: 0 1rem;
 }
@@ -128,17 +128,16 @@ figcaption {
   color: #a4b0be;
 }
 
-.selection-btn img {
-  width: 100%;
-}
-
 .selection-btn {
-  height: 15vh;
   margin: 0 1rem;
   border: none;
   background-color: transparent;
   outline: none;
   display: inline-block;
+}
+
+.selection-btn img {
+  width: 100%;
 }
 
 #restart-btn {
@@ -168,8 +167,8 @@ figcaption {
   border-radius: 0.5rem;
   text-align: center;
   padding: 0.5rem;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute;
+  bottom: 0; */
 }
 
 .opts-sect {
@@ -190,7 +189,6 @@ figcaption {
   .container {
     border-radius: 1rem;
     border: 1px solid rgb(221, 221, 221);
-    border-radius: 1rem;
     box-shadow: rgb(0 0 0 / 12%) 0px 6px 16px;
     width: 80%;
     height: 95vh;
@@ -207,6 +205,7 @@ figcaption {
   .aside-player,
   .aside-pc {
     height: 35vh;
+    /* max-width: 35vw; */
     margin: 0 1rem;
     padding: 1rem;
   }
@@ -226,11 +225,8 @@ figcaption {
   }
 
   .score-chart {
-    width: 70%;
-  }
-
-  .score-chart span {
-    font-size: 1.5rem;
+    font-size: 0.5rem;
+    width: 50%;
   }
 
   .selection-btn {
@@ -276,6 +272,7 @@ figcaption {
   }
 }
 
+/* Desktop brakepoint */
 @media (min-width: 992px) {
   header {
     border: none;
@@ -291,7 +288,7 @@ figcaption {
 
   .aside-player,
   .aside-pc {
-    height: 35vh;
+    /* height: 35vh; */
     margin: 1rem;
     padding: 2rem;
   }
