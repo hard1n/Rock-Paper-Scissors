@@ -206,7 +206,7 @@ figcaption {
     width: 80%;
     height: 100%;
     margin: 5px auto;
-    padding: 1rem;
+    /* padding-top: 0.5rem; */
   }
 
   header {
@@ -229,7 +229,7 @@ figcaption {
   }
 
   .selection-btn {
-    height: 20vh;
+    height: 15vh;
     margin: 0 1rem;
     cursor: pointer;
     outline: none;
@@ -248,10 +248,11 @@ figcaption {
     cursor: pointer;
     outline: none;
     padding: 0.5rem;
-    width: 35%;
+    width: 15%;
     color: #1e90ff;
     text-align: center;
     font-size: 1.5rem;
+    position: absolute;
   }
 
   #restart-btn:hover {
@@ -270,10 +271,8 @@ figcaption {
     position: relative;
   }
 }
-@media (min-width: 1200px) {
-  .aside-player,
-  .aside-pc {
-    /* padding: 0.5rem 2rem; */
-    /* width: 25%; */
+/* @media (min-width: 1200px) {
+  #restart-btn {
+    font-size: 1rem;
   }
-}
+} */
