@@ -178,12 +178,13 @@ figcaption {
   bottom: 0; */
 }
 
-.opts-sect {
-  /* position: fixed;
-  bottom: 1.5rem;
-  left: 0; */
-  /* inset: 0 5rem; */
-  /* width: 100%; */
+.footer a {
+  color: #a4b0be;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 /* Tablet breakpoint */
